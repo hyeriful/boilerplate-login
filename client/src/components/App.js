@@ -6,14 +6,17 @@ import {
   Link
 } from "react-router-dom";
 
-import LandingPage from './components/views/LandingPage/LandingPage'
-import LoginPage from './components/views/LoginPage/LoginPage'
-import RegisterPage from './components/views/RegisterPage/RegisterPage'
-import Auth from './hoc/auth' //hoc안에 다른 컴포넌트를 넣어주는 방법
+import LandingPage from './views/LandingPage/LandingPage'
+import LoginPage from './views/LoginPage/LoginPage'
+import RegisterPage from './views/RegisterPage/RegisterPage'
+import Footer from "./views/Footer/Footer";
+import NavBar from "./views/NavBar/NavBar";
+import Auth from '../hoc/auth' //hoc안에 다른 컴포넌트를 넣어주는 방법
 
 function App() {
   return (
     <Router>
+      <NavBar />
       <div>
 
         {/*
@@ -29,6 +32,7 @@ function App() {
           <Route exact path="/register" component={Auth(RegisterPage, false)} />
         </Switch>
       </div>
+      <Footer />
     </Router>
   );
 }
