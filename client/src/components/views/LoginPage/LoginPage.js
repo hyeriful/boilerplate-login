@@ -8,6 +8,7 @@ function LoginPage(props) {
     const dispatch = useDispatch();
 
     //react hook 사용
+    //[현재 상태, Setter함수]
     const [Email, setEmail] = useState("")  //초기값 빈 문자열로 세팅
     const [Password, setPassword] = useState("")
 
