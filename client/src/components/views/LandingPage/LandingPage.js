@@ -5,7 +5,7 @@ import { withRouter } from 'react-router-dom';
 function LandingPage(props) {
 
     useEffect(() => {
-        axios.get('/api/hello')
+        axios.get('/api/hello') //proxy를 설정(setupProxy.js)해주었기 때문에 http://localhost:5000 생략가능
             .then(response => { console.log(response) })
     }, [])
 
