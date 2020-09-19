@@ -73,3 +73,5 @@ router.get('/api/users/logout', auth, (req, res) => {
     );
 
 });
+
+module.exports = router;
