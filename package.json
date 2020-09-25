@@ -6,8 +6,10 @@
   "scripts": {
     "start": "node server/index.js",
     "backend": "nodemon --legacy-watch server/ server/index.js",
+    "client": "yarn --cwd client start",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "concurrently \"npm run backend\" \"npm run start --prefix client\""
+    "npm:dev": "concurrently \"npm run backend\" \"npm run start --prefix client\"",
+    "dev": "concurrently \"yarn backend\" \"yarn client\""
   },
   "author": "hyeri",
   "license": "ISC",
