@@ -1,0 +1,17 @@
+client 디렉토리 안에서 터미널에
+npx create-react-app .
+( . 을 해주는 이유는 client 디렉토리 안에 리액트를 설치를 하겠다는 의미)
+(yarn create react-app 앱이름)
+
+
+
+concurrently를 사용해서 프론트, 백 동시에 실행시작하기
+(이걸 사용 안하면 백에서 npm run~~ 하고 프론트에서도 해야했음)
+
+
+1. npm install concurrently
+루트 디렉토리의 package.json에서 해준다
+
+2. "start": "concurrently \"npm run backend\" \"npm run start --prefix client\""
+스크립트 태그 안에 작성
+--prefix client 해주면 알아서 client 폴더 안에 package.json찾아서 npm run start
